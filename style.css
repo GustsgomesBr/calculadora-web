@@ -11,6 +11,7 @@ body{
     width: 100vw;
     height: 100vh;
     background: url("bg.jpg") no-repeat;
+    background-size: 2500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,14 +47,14 @@ main{
     text-align: right;
 }
 
-main .calcButtons{
+main .gridNumbers{
     display: grid;
     grid-template-columns: auto auto auto;
 }
 
 main .topSettings{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 input[type=button]{
@@ -63,8 +64,10 @@ input[type=button]{
     font-weight: 700;
     font-size: 2rem;
     color: white;
+    border: solid 1px white;
 }
 
-input[type=button] #zero{
-    min-width: 100%;
+main .bottom{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
 }
