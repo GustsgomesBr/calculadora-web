@@ -28,7 +28,7 @@ main{
 .glass{
     background: white;
     background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
-    backdrop-filter: blur(1rem);
+    backdrop-filter: blur(0.5rem);
 }
 
 .result{
@@ -47,14 +47,26 @@ main{
     text-align: right;
 }
 
+.buttonsGrid{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+
 main .gridNumbers{
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-column: 1;
 }
 
-main .topSettings{
+.gridNumbers input[type=button]{
+    height: 100%;
+}
+
+main .gridOperators{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-column: 2;
+
 }
 
 input[type=button]{
@@ -67,7 +79,9 @@ input[type=button]{
     border: solid 1px white;
 }
 
-main .bottom{
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
+#deleteButton{
+    width: 15%;
+    border-top-right-radius: 20px;
+    height: 100%;
+    margin-left: 10px;
 }
