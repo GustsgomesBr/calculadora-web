@@ -29,6 +29,24 @@ function somarButton(){
     }
 }
 
+function subtrairButton(){
+    atuacao = "subtrair";
+    if(num1 === null){
+        num1 = parseFloat(numeroAtual)
+        numeroAtual = "";
+        atualizarConsole()
+    }
+}
+
+function multiplicarButton(){
+    atuacao = "multiplicar";
+    if(num1 === null){
+        num1 = parseFloat(numeroAtual)
+        numeroAtual = "";
+        atualizarConsole()
+    }
+}
+
 function criarResultado(){
     var result;
     if(atuacao === "somar"){
@@ -36,5 +54,22 @@ function criarResultado(){
         numeroAtual = result.toString();
         atualizarConsole();
         num1 = null;
+        atuacao = ""
     }
+    if(atuacao === "subtrair"){
+        result = num1 - parseFloat(numeroAtual);
+        numeroAtual = result.toString();
+        atualizarConsole();
+        num1 = null;
+        atuacao = ""
+    }
+    if(atuacao ==="multiplicar"){
+            result = num1 * parseFloat(numeroAtual);
+            numeroAtual = result.toString();
+            atualizarConsole();
+            num1 = null;
+            atuacao = ""
+    }
+
+
 }
