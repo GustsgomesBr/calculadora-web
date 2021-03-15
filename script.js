@@ -47,6 +47,15 @@ function multiplicarButton(){
     }
 }
 
+function divisaoButton(){
+    atuacao = "divisao";
+    if(num1 === null){
+        num1 = parseFloat(numeroAtual)
+        numeroAtual = "";
+        atualizarConsole()
+    }
+}
+
 function criarResultado(){
     var result;
     if(atuacao === "somar"){
@@ -70,6 +79,13 @@ function criarResultado(){
             num1 = null;
             atuacao = ""
     }
+    if(atuacao ==="divisao"){
+        result = num1 / parseFloat(numeroAtual);
+        numeroAtual = result.toString();
+        atualizarConsole();
+        num1 = null;
+        atuacao = ""
+}
 
 
 }
