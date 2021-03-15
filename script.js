@@ -1,18 +1,20 @@
 var numeroAtual = "";
+var numeroAnterior = "";
 var num1 = null;
-var num2 = null;
 var atuacao = "";
 
 var clickSomar = 0;
+var anteriorConsole = document.getElementById('numAnterior')
 var calcConsole = document.getElementById('calcConsole')
+
+function atualizarConsole(){
+    calcConsole.innerHTML = numeroAtual
+    anteriorConsole.innerHTML = numeroAnterior
+}
 
 function buttonNumber(num){
     numeroAtual += num
     atualizarConsole()
-}
-
-function atualizarConsole(){
-    calcConsole.innerHTML = numeroAtual
 }
 
 function apagarButton(){
@@ -24,6 +26,7 @@ function somarButton(){
     atuacao = "somar";
     if(num1 === null){
         num1 = parseFloat(numeroAtual)
+        numeroAnterior = numeroAtual + "+";
         numeroAtual = "";
         atualizarConsole()
     }
@@ -33,6 +36,7 @@ function subtrairButton(){
     atuacao = "subtrair";
     if(num1 === null){
         num1 = parseFloat(numeroAtual)
+        numeroAnterior = numeroAtual + "-";
         numeroAtual = "";
         atualizarConsole()
     }
@@ -42,6 +46,7 @@ function multiplicarButton(){
     atuacao = "multiplicar";
     if(num1 === null){
         num1 = parseFloat(numeroAtual)
+        numeroAnterior = numeroAtual + "*";
         numeroAtual = "";
         atualizarConsole()
     }
@@ -51,6 +56,7 @@ function divisaoButton(){
     atuacao = "divisao";
     if(num1 === null){
         num1 = parseFloat(numeroAtual)
+        numeroAnterior = numeroAtual + "/";
         numeroAtual = "";
         atualizarConsole()
     }
@@ -58,6 +64,7 @@ function divisaoButton(){
 
 function criarResultado(){
     var result;
+    numeroAnterior = ""
     if(atuacao === "somar"){
         result = num1 + parseFloat(numeroAtual);
         numeroAtual = result.toString();
