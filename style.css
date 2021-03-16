@@ -53,9 +53,14 @@ main{
 
 #deleteButton{
     min-width: 10%;
-    border-top-right-radius: 20px;
     height: 100%;
     margin-left: 10px;
+}
+
+#resetAllButton{
+    min-width: 10%;
+    border-top-right-radius: 20px;
+    height: 100%;
 }
 
 .buttonsGrid{

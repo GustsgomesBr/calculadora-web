@@ -22,6 +22,14 @@ function apagarButton(){
     atualizarConsole()   
 }
 
+function cleanAll(){
+    numeroAnterior = "";
+    numeroAtual = "";
+    atuacao = "";
+    num1 = null;
+    atualizarConsole()
+}
+
 function somarButton(){
     atuacao = "somar";
     if(num1 === null){
