@@ -74,6 +74,7 @@ function criarResultado(){
     var result;
     numeroAnterior = ""
     if(atuacao === "somar"){
+        numeroAnterior = num1 + "+" + numeroAtual + "=  ";
         result = num1 + parseFloat(numeroAtual);
         numeroAtual = result.toString();
         atualizarConsole();
@@ -81,6 +82,7 @@ function criarResultado(){
         atuacao = ""
     }
     if(atuacao === "subtrair"){
+        numeroAnterior = num1 + "-" + numeroAtual + "=  ";
         result = num1 - parseFloat(numeroAtual);
         numeroAtual = result.toString();
         atualizarConsole();
@@ -88,6 +90,7 @@ function criarResultado(){
         atuacao = ""
     }
     if(atuacao ==="multiplicar"){
+        numeroAnterior = num1 + "*" + numeroAtual + "=  ";
             result = num1 * parseFloat(numeroAtual);
             numeroAtual = result.toString();
             atualizarConsole();
@@ -95,6 +98,7 @@ function criarResultado(){
             atuacao = ""
     }
     if(atuacao ==="divisao"){
+        numeroAnterior = num1 + "/" + numeroAtual + "=  ";
         result = num1 / parseFloat(numeroAtual);
         numeroAtual = result.toString();
         atualizarConsole();
