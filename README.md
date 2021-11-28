@@ -8,5 +8,5 @@ Teste do estilo Glass Morphism.
 
 
 Acesse o site:
-https://gustsgomesbr.github.io/calculadora-web/
+https://gustavosgdev.github.io/calculadora-web/
 
